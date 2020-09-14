@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://java.sun.com/xml/ns/javaee" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd" id="WebApp_ID" version="3.0">
+  <display-name>LostAndFoundSystem</display-name>
+  <welcome-file-list>
+    <welcome-file>index.html</welcome-file>
+    <welcome-file>index.htm</welcome-file>
+    <welcome-file>index.jsp</welcome-file>
+    <welcome-file>default.html</welcome-file>
+    <welcome-file>default.htm</welcome-file>
+    <welcome-file>default.jsp</welcome-file>
+  </welcome-file-list>
+  
+  <servlet>
+  	<!-- 设置登录的servlet  并配置对应的servlet的路径 -->
+    <servlet-name>loginServlet</servlet-name>
+    <servlet-class>com.servlet.LoginServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>loginServlet</servlet-name>
+    <!-- 映射路径 -->
+    <url-pattern>/loginServlet</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+  	<!-- 设置注册的servlet  并配置对应的servlet映射路径 -->
+    <servlet-name>registerServlet</servlet-name>
+    <servlet-class>com.servlet.RegisterServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>registerServlet</servlet-name>
+    <!-- 映射路径 -->
+    <url-pattern>/registerServlet</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+  	<!-- 设置发布的servlet  并配置servlet对应的映射路径 -->
+    <servlet-name>releaseInformationServlet</servlet-name>
+    <servlet-class>com.servlet.ReleaseInformationServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>releaseInformationServlet</servlet-name>
+    <!-- 映射路径 -->
+    <url-pattern>/releaseInformationServlet</url-pattern>
+  </servlet-mapping>
+  
+  	<!-- 设置初始化参数 -->
+  <context-param>
+    <param-name>name</param-name>
+    <param-value>huzuwei</param-value>
+  </context-param>
+  <context-param>
+    <param-name>mima</param-name>
+    <param-value>123456</param-value>
+  </context-param>
+</web-app>
